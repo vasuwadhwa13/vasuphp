@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHP</title>
+<style>
+    /* Dark Theme Colors */
+    :root {
+        --primary-color: #1abc9c;      /* Accent color */
+        --secondary-color: #2c3e50;    /* Sidebar background */
+        --bg-color: #121212;           /* Page background */
+        --text-color: #ecf0f1;         /* Main text */
+        --nav-text-color: #ecf0f1;     /* Sidebar text */
+        --frame-bg: #1f2c3a;           /* Card background */
+        --frame-border: #1abc9c;       /* Card border */
+    }
+
+    /* Reset default styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: all 0.4s ease;
+    }
+
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    .container {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    .navbar {
+        width: 250px;
+        background-color: var(--secondary-color);
+        padding: 25px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: auto;
+        position: fixed;
+        height: 100vh;
+        box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .navlist {
+        list-style: none;
+    }
+
+    .navlist li {
+        margin: 15px 0;
+    }
+
+    .navlist a {
+        text-decoration: none;
+        color: var(--nav-text-color);
+        font-weight: bold;
+        font-size: 18px;
+        padding: 12px 15px;
+        display: block;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .navlist a:hover {
+        background-color: var(--primary-color);
+        color: #fff;
+        transform: translateX(5px);
+    }
+
+    /* Main Content */
+    .main-content {
+        flex-grow: 1;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 250px;
+    }
+
+    .frame {
+        border: 2px solid var(--frame-border);
+        padding: 50px 60px;
+        background-color: var(--frame-bg);
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        transition: transform 0.3s ease, border-color 0.4s ease, background-color 0.4s ease;
+    }
+
+    .frame:hover {
+        transform: scale(1.02);
+    }
+
+    h1 {
+        color: var(--text-color);
+        margin-bottom: 10px;
+        font-size: 38px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        color: var(--primary-color);
+        margin-top: 10px;
+        font-size: 24px;
+    }
+
+    p {
+        color: var(--text-color);
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    /* Footer Centered at Bottom */
+    footer {
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        color: var(--text-color);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar Navigation -->
+    <nav class="navbar">
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li><a href="prog.html">Programs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="form.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="frame">
+            <h1>PHP</h1>
+            <h2>VASU DEV</h2>
+            <p>4041/23</p>
+            <p>BCA - 3rd Year</p>
+            <h2>Mentor: Gaurav Dutt</h2>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>© 2025 PHP Project | Created by Vasu Dev</p>
+</footer>
+
+</body>
+</html>

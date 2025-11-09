@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: #1e1e1e;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #00bcd4;
+            font-weight: 600;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #ccc;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 15px;
+            transition: border 0.3s ease, background-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #00bcd4;
+            background-color: #333;
+            outline: none;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #00bcd4;
+            margin-right: 6px;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0097a7;
+            transform: translateY(-2px);
+        }
+
+        /* Add smooth spacing between inline labels (radio/checkbox) */
+        .inline-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form action="feedback.php" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+            <label>Gender:</label>
+            <div class="inline-group">
+                <input type="radio" id="male" name="gender" value="Male"> <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female"> <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other"> <label for="other">Other</label>
+            </div>
+
+            <label>Tutorials Learnt:</label>
+            <div class="inline-group">
+                <input type="checkbox" id="html" name="tutorials[]" value="HTML"> <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="tutorials[]" value="CSS"> <label for="css">CSS</label>
+                <input type="checkbox" id="js" name="tutorials[]" value="JS"> <label for="js">JS</label>
+                <input type="checkbox" id="java" name="tutorials[]" value="JAVA"> <label for="java">JAVA</label>
+                <input type="checkbox" id="php" name="tutorials[]" value="PHP"> <label for="php">PHP</label>
+            </div>
+
+            <label for="year">Year:</label>
+            <select name="year" id="year">
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+            </select>
+
+            <label for="Feedback">Feedback:</label>
+            <textarea name="feedback" id="Feedback" placeholder="Enter your feedback..." required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
